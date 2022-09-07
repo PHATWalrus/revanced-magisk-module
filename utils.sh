@@ -225,6 +225,7 @@ build_yt() {
 
 	if [[ $YT_PATCHER_ARGS != *"-e microg-support"* ]] && [[ $YT_PATCHER_ARGS != *"--exclusive"* ]] || [[ $YT_PATCHER_ARGS == *"-i microg-support"* ]]; then
 		local is_root=false
+		local patcher_args=$YT_PATCHER_ARGS
 	else
 		local is_root=true
 		# --unsigned is only available in my revanced-cli builds
@@ -280,6 +281,7 @@ build_music() {
 
 	if [[ $MUSIC_PATCHER_ARGS != *"-e music-microg-support"* ]] && [[ $MUSIC_PATCHER_ARGS != *"--exclusive"* ]] || [[ $MUSIC_PATCHER_ARGS == *"-i music-microg-support"* ]]; then
 		local is_root=false
+		local patcher_args=$MUSIC_PATCHER_ARGS
 	else
 		local is_root=true
 		# --unsigned is only available in my revanced-cli builds
